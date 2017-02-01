@@ -1,52 +1,49 @@
 module.exports = function(grunt) {
-
-  // Project configuration.
   grunt.initConfig({
-  sass: {
+    sass: {
       options: {
         sourceMap: true
       },
       dist: {
         files: {
-          'css/style.css': 'sass/style.sass',
-          'css/grid.css': 'sass/grid.sass'
+          'css/style.css': 'sass/style.sass'
         }
       }
     },
 
-  imagemin: {
-    dynamic: {
+    imagemin: {
+      dynamic: {
         files: [{
-            expand: true,
-            cwd: 'images/',
-            src: ['**/*.{png,jpg,gif}'],
-            dest: 'images/build/'
+          expand: true,
+          cwd: 'images/',
+          src: ['**/*.{png,jpg,gif}'],
+          dest: 'images/build/'
         }]
-    }
-  },
+      }
+    },
 
-  watch: {
+    watch: {
       scripts: {
-          files: ['sass/style.sass','sass/grid.sass'],
-          tasks: ['sass'],
-          options: {
-              spawn: false,
+        files: ['sass/style.sass'],
+        tasks: ['sass'],
+        options: {
+          spawn: false,
           },
       } 
-  },
-
-browserSync: {
-    bsFiles: {
-        src: ['Repozytorium/css/*.css',
-             'Repozytorium/*.html']
     },
-    options: {
-        watchTask: true,
-        server: './Repozytorium'
-    }
-}
 
-});
+    browserSync: {
+      bsFiles: {
+        src: ['my_sass/css/*.css',
+             'my_sass/*.html']
+      },
+    
+      options: {
+        watchTask: true,
+        server: './my_sass'
+      }
+    }
+  });
 
   // Load the plugins tasks 
   grunt.loadNpmTasks('grunt-sass');
