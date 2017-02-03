@@ -1,0 +1,27 @@
+{
+  "name": "my_sass",
+  "version": "1.0.0",
+  "description": "My workflow",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arkadiusz-cichosz/my_sass.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arkadiusz-cichosz/my_sass/issues"
+  },
+  "homepage": "https://github.com/arkadiusz-cichosz/my_sass#readme",
+  "dependencies": {
+    "grunt": "^1.0.1",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-imagemin": "^1.0.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-sass": "^2.0.0"
+  }
+}
